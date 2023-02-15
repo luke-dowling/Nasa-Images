@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Candal&display=swap');
+$mainColor: #0b3d91;
+$secColor: #020202;
+$supcolor: #fdfdfd;
+$navHeight: 100px;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: $secColor;
+}
+
+.app {
+  .nav {
+    height: $navHeight;
+    padding: 10px 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'Candal', sans-serif;
+      font-size: 30px;
+      letter-spacing: -4px;
+      text-decoration: none;
+      .type-space {
+        width: 10px;
+      }
+      .type-color {
+        color: $supcolor;
+      }
+    }
+    .menu {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 16px;
+      letter-spacing: 2px;
+      a {
+        color: $supcolor;
+        text-decoration: none;
+      }
+    }
+  }
+  .homebanner {
+    height: calc(100vh - #{$navHeight});
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .images {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    padding: 150px 200px;
+    .image {
+      img {
+        overflow: hidden;
+        width: 100%;
+        height: 35vh;
+      }
+      :hover {
+        box-shadow: 0 0 20px $mainColor;
+        transform: scale(1.1);
+        transition: 0.4s;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.background-three {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
